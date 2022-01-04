@@ -1,4 +1,4 @@
-alphabetList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","Q","R","S","X","Y","Z"]
+alphabetList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 gameGridList = []
 
 def boundaryLine(xAxis,yAxis):
@@ -41,8 +41,8 @@ def gameGrid(xAxis,yAxis,boundaryLine,alphabetLine):
         gameGridList.append(row)
         gameGridList.append(boundaryLine)
         i+=1
-boundaryLine = boundaryLine(8,5)
-alphabetLine= alphabetLine(8,5)
-gameGrid(8,5,boundaryLine,alphabetLine)
+boundaryLine = boundaryLine(26,1)
+alphabetLine = alphabetLine(26,1)
+gameGrid(26,1,boundaryLine,alphabetLine)
 for line in gameGridList:
     print("".join(line))
