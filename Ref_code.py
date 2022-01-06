@@ -607,10 +607,6 @@ def highscore(Total):
 
     LoadFile.close()
     
-    
-    
-        
-
 #Game Process
 while True:
     if part1 == '1':
