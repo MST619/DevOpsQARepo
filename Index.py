@@ -8,6 +8,7 @@ S10198398, Jeremiah Long
 '''
 alphabetList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 gameGridList = []
+buildingCode = ['HSE','FAC','SHP','HWY','BCH', 'PRK', 'MON']
 
 MainMenuData = \
 ['Welcome, mayor of Simp City!',
@@ -47,31 +48,6 @@ def MainMenuSelection(userInput):
             print("Feature still under development!\n\n", end = '')
         else:
             print("Invalid input!\n", end = '')
-
-# def boundaryLine(xAxis,yAxis):
-#     print("this ran in boundary line")
-#     boundaryLineContent = "  "
-#     boundaryLine = []
-#     i = 0
-#     while i < xAxis :
-#         boundaryLineContent += "+-----"
-#         i+=1
-#
-#     boundaryLineContent += "+"
-#     boundaryLine.append(boundaryLineContent)
-#     return boundaryLine
-#
-#
-# def alphabetLine(xAxis,yAxis):
-#     alphabetLineContent = "  "
-#     alphabetLine = []
-#     i = 0
-#     while i < xAxis :
-#         alphabetLineContent += "   " + alphabetList[i] + "  "
-#         i+=1
-#     alphabetLineContent += " "
-#     alphabetLine.append(alphabetLineContent)
-#     return alphabetLine
 
 
 def gameGrid(xAxis,yAxis):
@@ -114,6 +90,10 @@ def gameGrid(xAxis,yAxis):
         gameGridList.append(boundaryLine)
         i+=1
         #End of code to create grids
+
+#def buildingPool():
+    
+
 def newGame(gameGridList):
     print(gameGridList)
     print("Please select Game Map size \n")
@@ -121,6 +101,8 @@ def newGame(gameGridList):
     yAxis = int(input('Enter in your desired map size height: '))
     print("Hi this runs here")
     gameGrid(xAxis,yAxis)
+    #Insert building pool 
+
     #Prints out game grid
     for line in gameGridList:
         print("".join(line))

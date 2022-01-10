@@ -41,8 +41,13 @@ def gameGrid(xAxis,yAxis,boundaryLine,alphabetLine):
         gameGridList.append(row)
         gameGridList.append(boundaryLine)
         i+=1
+
+def printGamegrid(gameGridList):
+    for line in gameGridList:
+        print("".join(line))
+
 boundaryLine = boundaryLine(26,1)
 alphabetLine = alphabetLine(26,1)
 gameGrid(26,1,boundaryLine,alphabetLine)
-for line in gameGridList:
-    print("".join(line))
+
+printGamegrid(gameGridList)
