@@ -50,63 +50,63 @@ def MainMenuSelection(userInput):
             print("Invalid input!\n", end = '')
 
 
-# def gameGrid(xAxis,yAxis):
-#     #Start of code to create alphabetLine - First Line of game grid"
-#     alphabetLineContent = "  "
-#     alphabetLine = []
-#     i = 0
-#     while i < xAxis :
-#         alphabetLineContent += "   " + alphabetList[i] + "  "
-#         i+=1
-#     alphabetLineContent += " "
-#     alphabetLine.append(alphabetLineContent)
-#     gameGridList.append(alphabetLine) #add first line to grid list - e.g [   A     B     C     D     E   ]
-#     #End of code to create alphabetLine - First Line of game grid"
+def gameGrid(xAxis,yAxis):
+    #Start of code to create alphabetLine - First Line of game grid"
+    alphabetLineContent = "  "
+    alphabetLine = []
+    i = 0
+    while i < xAxis :
+        alphabetLineContent += "   " + alphabetList[i] + "  "
+        i+=1
+    alphabetLineContent += " "
+    alphabetLine.append(alphabetLineContent)
+    gameGridList.append(alphabetLine) #add first line to grid list - e.g [   A     B     C     D     E   ]
+    #End of code to create alphabetLine - First Line of game grid"
 
-#     #Start of code to create boundaryLine - game grid seperating lines"
-#     boundaryLineContent = "  "
-#     boundaryLine = []
-#     i = 0
-#     while i < xAxis :
-#         boundaryLineContent += "+-----"
-#         i+=1
+    #Start of code to create boundaryLine - game grid seperating lines"
+    boundaryLineContent = "  "
+    boundaryLine = []
+    i = 0
+    while i < xAxis :
+        boundaryLineContent += "+-----"
+        i+=1
 
-#     boundaryLineContent += "+"
-#     boundaryLine.append(boundaryLineContent)
-#     gameGridList.append(boundaryLine) #add second line to grid list -     e.g [+-----+-----+-----+-----+-----+]
-#     #End of code to create boundaryLine - game grid seperating lines"
+    boundaryLineContent += "+"
+    boundaryLine.append(boundaryLineContent)
+    gameGridList.append(boundaryLine) #add second line to grid list -     e.g [+-----+-----+-----+-----+-----+]
+    #End of code to create boundaryLine - game grid seperating lines"
 
-#     #Start of code to create grids
-#     i = 0
-#     while i < yAxis:
-#         row = []
-#         rowContent = ""
-#         if i < 9:
-#             row += ((" " + str(i+1) + "|     |") + (("     |") * (xAxis-1)))
-#         else:
-#             row += (("" + str(i+1) + "|     |") + (("     |") * (xAxis-1)))
-#         row.append(rowContent)
-#         gameGridList.append(row)
-#         gameGridList.append(boundaryLine)
-#         i+=1
-#         #End of code to create grids
-
-#def buildingPool():
-def gameGrid(xAxis, yAxis):
-    gameGrid = str("    A     B     C     D   \n" +
-    " +-----+-----+-----+-----+\n" +
-    "1|     |     |     |     |\n" +
-    " +-----+-----+-----+-----+\n" +
-    "2|     |     |     |     |\n" +
-    " +-----+-----+-----+-----+\n" +
-    "3|     |     |     |     |\n" +
-    " +-----+-----+-----+-----+\n" + 
-    "4|     |     |     |     |\n" +
-    " +-----+-----+-----+-----+")
-    
+    #Start of code to create grids
+    i = 0
+    while i < yAxis:
+        row = []
+        rowContent = ""
+        if i < 9:
+            row += ((" " + str(i+1) + "|     |") + (("     |") * (xAxis-1)))
+        else:
+            row += (("" + str(i+1) + "|     |") + (("     |") * (xAxis-1)))
+        row.append(rowContent)
+        gameGridList.append(row)
+        gameGridList.append(boundaryLine)
+        i+=1
+        #End of code to create grids
+    for line in gameGridList:
+        print("".join(line))
+# def buildingPool():
+# def gameGrid(xAxis, yAxis):
+#     gameGrid = str("     A     B     C     D   \n" +
+#             "  +-----+-----+-----+-----+\n" +
+#             " 1|     |     |     |     |\n" +
+#             "  +-----+-----+-----+-----+\n" +
+#             " 2|     |     |     |     |\n" +
+#             "  +-----+-----+-----+-----+\n" +
+#             " 3|     |     |     |     |\n" +
+#             "  +-----+-----+-----+-----+\n" + 
+#             " 4|     |     |     |     |\n" +
+#             "  +-----+-----+-----+-----+")
+#     print(gameGrid)
 
 def newGame(gameGridList):
-    print(gameGridList)
     print("Please select Game Map size \n")
     xAxis = int(input('Enter in your desired map size width: '))
     yAxis = int(input('Enter in your desired map size height: '))
@@ -115,8 +115,8 @@ def newGame(gameGridList):
     #Insert building pool 
 
     #Prints out game grid
-    for line in gameGridList:
-        print("".join(line))
+    # for line in gameGridList:
+    #     print("".join(line))
 # code runs here
 try:
     runMainMenu()
