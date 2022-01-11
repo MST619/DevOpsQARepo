@@ -6,7 +6,7 @@ import Index
 gameGridList = []
 
 @pytest.mark.parametrize("xAxis, yAxis, expectedprint",
-                        [("4", "4", "    A     B     C     D\n"+
+                        [(4, 4, "   A     B     C     D   \n"+
                     " " + "+-----+-----+-----+-----+\n" +
                 "1|     |     |     |     |\n" +
                 " " + "+-----+-----+-----+-----+\n" +
